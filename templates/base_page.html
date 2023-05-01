@@ -6,26 +6,25 @@
     <!-- load static -->
     {% load static %}
     <!-- CSS -->
-    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'foundation.min.css' %}" rel="stylesheet">
 </head>
 <body>
 <main>
     <div class="container">
-        <header class="border-bottom">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <div class="fs-2 mb-3">
-                    <span>Проект про английский</span>
-                </div>
+        <header class="top-bar">
+            <a href="/" class="button large hollow">
+                <span>Проект про английский</span>
             </a>
         </header>
-        <div class="p-5 mb-4 bg-light rounded-3" id="title-box">
-            <div class="container-fluid py-5">
-                <h1 class="display-1 fw-bold">{% block page-title %}{% endblock %}</h1>
-                <p class="col-md-8 fs-4">{% block page-lead %}{% endblock %}</p>
-            </div>
+        <hr>
+        <div class="row column">
+            <h1 style="margin: 0;" class="text-center">{% block page-title %}{% endblock %}</h1>
         </div>
+        <hr>
+        <p class="row small-up-3 medium-up-4 large-up-5 text-center">{% block page-lead %}{% endblock %}</p>
+        <hr>
         {% block content %}{% endblock %}
-        <footer class="footer pt-3 mt-4 text-muted border-top">© 2023</footer>
+        <footer>© 2023</footer>
     </div>
 </main>
 </body>
