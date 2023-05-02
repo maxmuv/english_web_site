@@ -19,5 +19,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index),
-    path('words_list', views.words_list)
+    path('words_list', views.words_list),
+    path('word_add', views.word_add),
+    path('word_request', views.word_request)
 ]

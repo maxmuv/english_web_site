@@ -1,0 +1,31 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+{% if success %}
+Слово добавлено
+{% else %}
+Ошибка добавления
+{% endif %}
+{% endblock %}
+
+{% block page-lead %}{% endblock %}
+
+{% block content %}
+<div class="container" id="term-form-result">
+    <div class="row">
+        <h3 >Результат запроса</h3>
+        <p>Уважаемый пользователь <span class="fst-italic">{{ user }}</span>,<br/>
+            Ваш запрос завершился <span class="fw-bold">{% if success %}успешно{% else %}ошибкой{% endif %}</span>.
+        </p>
+
+        <h3>Комментарий</h3>
+        <p>{{ comment }}</p>
+
+        <h3>Что можно сделать?</h3>
+        <ul>
+            <li>заполнить <a href="/word_add">форму</a> ещё раз,</li>
+            <li>вернуться на <a href="/">главную</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
