@@ -21,3 +21,14 @@ def write_word(new_word, new_translation):
     new_words = [title] + words_sorted
     with open("./data/words.csv", "w", encoding="utf-8") as f:
         f.write("\n".join(new_words))
+
+
+def get_classes():
+    classes = []
+    with open("./data/classes.csv", "r", encoding="utf-8") as f:
+        cnt = 1
+        for line in f.readlines()[1:]:
+            cls, teacher, time, comment, source = line.split(";")
+            classes.append([cnt, cls, teacher, time, comment])
+            cnt += 1
+    return classes

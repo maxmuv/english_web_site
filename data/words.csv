@@ -1,4 +1,9 @@
 word;translation;source
-sun;солнце;db
+eye;глаз;user
+moon;луна;user
+sheep;овца;user
 sky;небо;db
+sleep;сон;user
+sun;солнце;db
+translate;переводить;user
 wind;ветер;db

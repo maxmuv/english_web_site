@@ -48,3 +48,7 @@ def word_request(request):
     else:
         return word_add(request)
 
+
+def classes_list(request):
+    classes = words_work.get_classes()
+    return render(request, "classes_list.html", context={"classes": classes})

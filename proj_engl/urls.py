@@ -21,5 +21,6 @@ urlpatterns = [
     path('', views.index),
     path('words_list', views.words_list),
     path('word_add', views.word_add),
-    path('word_request', views.word_request)
+    path('word_request', views.word_request),
+    path('classes_list', views.classes_list)
 ]
